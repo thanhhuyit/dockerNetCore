@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  weblinux:
+    image: ${DOCKER_REGISTRY-}weblinux
+    build:
+      context: .
+      dockerfile: src/WebLinux/Dockerfile
+  gkposapp:
+    image: ${DOCKER_REGISTRY-}gkposapp
+    build:
+      context: .
+      dockerfile: src/GkPosApp/Dockerfile
+    
