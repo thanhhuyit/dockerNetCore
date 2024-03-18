@@ -11,3 +11,6 @@
 /src/WebLinux/obj
 /src/WebSite/obj
 /.vs/WebSite-Docker/FileContentIndex
+/.vs/WebSite-Docker/DesignTimeBuild
+/.vs/WebSite-Docker/v17
+/.vs/ProjectEvaluation

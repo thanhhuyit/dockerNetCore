@@ -28,7 +28,7 @@ namespace AkApp.Controllers
         {
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            var response = client.GetAsync($"{_options.ShopApiUrl}?shopid={_options.ShopId}").Result;
+            var response = client.GetAsync($"{_options.BaseApiUrl}?shopid={_options.StoreNumber}").Result;
 
             string responseBody = await response.Content.ReadAsStringAsync();
 

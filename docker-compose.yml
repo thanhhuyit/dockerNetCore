@@ -1,14 +1,37 @@
 version: '3.4'
 
+#Learn more about docker
+#https://www.c-sharpcorner.com/blogs/deploying-netcore-application-to-docker-container
+
 services:
   weblinux:
     image: ${DOCKER_REGISTRY-}weblinux
     build:
       context: .
       dockerfile: src/WebLinux/Dockerfile
+    ports:
+        - "8089:80"
+    environment:
+        - DEBIG=1
+        - ENV="Development"
   gkposapp:
     image: ${DOCKER_REGISTRY-}gkposapp
     build:
       context: .
       dockerfile: src/GkPosApp/Dockerfile
+    ports:
+        - "8090:80"
+    environment:
+        - DEBIG=1
+        - ENV="Development"
+  akaapp:
+    image: ${DOCKER_REGISTRY-}akaapp
+    build:
+      context: .
+      dockerfile: src/AkApp/Dockerfile
+    ports:
+        - "8091:80"
+    environment:
+        - DEBIG=1
+        - ENV="Development"
     

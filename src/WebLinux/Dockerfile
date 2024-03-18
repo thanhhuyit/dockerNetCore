@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["WebLinux/WebLinux.csproj", "WebLinux/"]
+COPY . "WebLinux/"
 RUN dotnet restore "WebLinux/WebLinux.csproj"
 COPY . .
 WORKDIR "/src/WebLinux"
