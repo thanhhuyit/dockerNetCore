@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/obj
+/bin/Debug
+/src/AkApp/obj
+/src/GkPosApp/bin/Debug/net7.0
+/src/GkPosApp/obj
+/src/WebLinux/bin
+/src/WebLinux/obj
+/src/WebSite/obj
+/.vs/WebSite-Docker/FileContentIndex
