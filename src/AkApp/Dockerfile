@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["AkApp/AkApp.csproj", "AkApp/"]
+COPY . "AkApp/"
 RUN dotnet restore "AkApp/AkApp.csproj"
 COPY . .
 WORKDIR "/src/AkApp"
